@@ -13,6 +13,12 @@ const app = () => {
   outline.style.strokeDasharray = outlineLength;
   outline.style.strokeDashoffset = outlineLength;
 
+  document.body.onkeyup = function (e) {
+    if (e.keyCode == 32) {
+      togglePlay(song, video);
+    }
+  };
+
   play.addEventListener("click", () => {
     togglePlay(song, video);
   });
